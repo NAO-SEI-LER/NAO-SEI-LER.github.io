@@ -1,0 +1,68 @@
+   body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100hv; /*BODY OCUPA 100% DA ALTURA DA TELA*/
+    width: 100hw;  /*BODY OCUPA 100% DA largura DA TELA*/
+    background: black;
+}
+
+.content{
+    height: 500px;
+    width: 1500px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content .slide{
+    height: 100%;
+    width: 100%;
+}
+
+.navigation{
+    position: absolute;/*MODIFICA ONDE FOR DESEJADO*/
+    bottom: 160px;
+    left: 850px;
+    display: flex;
+}
+.bar{
+    width: 15px;
+    height:15px;
+    border: 2px solid white;
+    margin: 6px;
+    border-radius: 15px; /*DEIXA REDONDO A LABEL*/
+    cursor: pointer; /*FAZ O CURSOR VIRAR UMA MÃOZINHA QUANDO PASSA POR CIMA DE LABEL*/
+    transition: 1s ease; /*DAR  EFEITO PARA QUANDO FOR USAR O HOVER*/
+    background-color: black;
+}
+.bar:hover{
+    background: white;/*DEIXA A LABEL BRANCA QUANDO O CURSOR PASSAR POR CIMA*/
+}
+
+input{
+    display: none;
+}
+
+.slides{
+    display: flex; /*DEIXA UMA IMAGEM AO LADO DA OUTRA*/
+    width:100%;
+    height: 50%;
+}
+
+.slide{
+    width: 100%;
+    width: 100hw;
+    transition: 1s; /*CRIA EFEITO QUANDO PASSA AS IMAGENS*/
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0%;
+
+}
+#slide2:checked ~ .s1{
+    margin-left: -100%;
+    
+}

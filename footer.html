@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    footer{
+        width: 100%;
+        color: #ffffff;
+    }
+
+    .logo_footer{
+        font-family: system-ui, 
+        Arial, Helvetica, sans-serif;
+        color: #ffff;
+        margin-bottom: 0.75rem;
+    }
+    
+    p{
+        font-family: system-ui, 
+        Arial, Helvetica, sans-serif;
+        color: #ffff;
+    }
+    .footer_link{
+        text-decoration: none;
+        color: #ffff;
+    }
+    
+    #footer_content{
+        background-color: #000000;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /*DIVITE EM QUATRO COLUNA*/
+        padding: 3rem 3.5rem; /*ESPAÇAMENTO*/   
+    }
+    
+    
+    .footer_social_media{
+        display: flex;
+        gap: 2rem; /*ESPAÇAMENTO ENTRE OS ICONES*/
+        margin-top: 1.5rem;
+    }
+    .footer_link{
+        color: #ffff;
+    }
+    .footer_social_media .footer_link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2rem;
+        color: #ffffff;
+        border-radius: 50%;
+        transition: all 0.4s;
+    }
+    
+    .footer_social_media .footer_link:hover{
+        opacity: 0.8;
+    }
+    
+    #instagram{
+        background: linear-gradient(#7f37c9, #ff2992, #ff98);
+    }
+    
+    #facebook{
+        background-color: #4267b3;
+    }
+    
+    #whatsapp{
+        background: #25d366;
+    }
+
+    .fa-brands .fa-whatsapp{
+        color: #ffff;
+    }
+</style>
+<body>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1 class="logo_footer">Logo</h1>
+                <p>It's all about your dreams</p>
+    
+                <div id="footer_social_midia">
+                    <a href="#" class="footer_link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+    
+                <div class="footer_social_midia">
+                    <a href="#" class="footer_link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+    
+                <div id="footer_social_midia">
+                    <a href="#" class="footer_link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <ul class="footer_list">
+                <li>
+                    <h3 class="footer_text">Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Tech</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Adventures</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Music</a>
+                </li>
+            </ul>
+    
+            <ul class="footer_list">
+                <li>
+                    <h3 class="footer_text">Products</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">App</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Desktop</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Cloud</a>
+                </li>
+            </ul>
+    
+            <div id="footer_subscribe">
+                <h3 class="footer_text">Subscrribe</h3>
+    
+                <p>
+                    Enter your e-mail to get notified abour
+                    our news solutions
+                </p>
+    
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="footer_copyright">
+            &#169
+            2024 all rights reserved
+        </div>
+    </footer>
+</body>
+</html>

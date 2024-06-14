@@ -1,0 +1,87 @@
+<?php
+
+include 'conexao.php';
+
+$fnome = $_POST['firstname'];
+$lname = $_POST['lastname'];
+$email = $_POST['email'];
+$cel = $_POST['cel'];
+$senha = $_POST['senha'];
+$cSenha = $_POST['confirmPassword'];
+
+//COLOCA DENTRO DO BANCO
+
+$recebendo_cadastro = "INSERT INTO
+av3
+VALUES ('', '$fnome', '$lname', '$email', '$cel', '$senha', '$cSenha')";
+
+$query_cadastrar = mysqli_query($connx, $recebendo_cadastro);
+
+header('location: AV2_teste.html');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesFormCadastro.css">
+    <title>Entrar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="capa_formulario.jpg">
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                    <button><a href="file:///D:/TI-2B/SITE%20AV2/Entrar.html">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firtname">Primeiro nome</label>
+                        <input id="firstname" type="text" name="firstname" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Último nome</label>
+                        <input id="lastname" type="text" name="lastname" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cel">Celular</label>
+                        <input id="cel" type="tel" name="cel" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Confirme sua senha</label>
+                        <input id="password" type="password" name="confirmPassword" required>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
